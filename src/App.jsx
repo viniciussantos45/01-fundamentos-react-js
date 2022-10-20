@@ -42,7 +42,7 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          {posts.map(post => (<Post author={post.author} content={post.content} publishAt={post.publishedAt} />))}
+          {posts.map((post, index) => (<Post key={post.id} author={post.author} content={post.content} publishAt={post.publishedAt} />))}
         </main>
       </div>
     </>
